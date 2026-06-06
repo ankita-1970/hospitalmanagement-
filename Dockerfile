@@ -15,5 +15,5 @@ COPY . .
 
 RUN python manage.py collectstatic --noinput
 
-EXPOSE 8000
-CMD gunicorn hospitalmanagement.wsgi --bind 0.0.0.0:$PORT --log-file -
+EXPOSE 8080
+CMD gunicorn hospitalmanagement.wsgi --bind 0.0.0.0:8080 --log-file -
